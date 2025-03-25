@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto Web</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <!-- Font Awesome para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header de la página -->
+    <header>
+        <h1>Mi Proyecto Web</h1>
+    </header>
+
+   
+    <!-- Botón para abrir el menú en dispositivos pequeños -->
+    <span id="openMenu" style="font-size:30px;cursor:pointer">&#9776; Menú</span>
+
+    <!-- Sidenav -->
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="#">Herramientas de Desarrollo</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Frameworks</a>
+        <a href="#">Formulario</a>
+        <a href="#">Control de Video</a>
+    </div>
+
+
+    <!-- Navegación con pestañas -->
+    <nav>
+        <ul class="tabs">
+            <li class="tab-link active" onclick="showSection('herramientas')">
+                <i class="fas fa-tools"></i> Herramientas de Desarrollo
+            </li>
+            <li class="tab-link" onclick="showSection('javascript')">
+                <i class="fab fa-js-square"></i> JavaScript
+            </li>
+            <li class="tab-link" onclick="showSection('frameworks')">
+                <i class="fas fa-cogs"></i> Frameworks en HTML y CSS
+            </li>
+            <li class="tab-link" onclick="showSection('frameworks_js')">
+                <i class="fab fa-node"></i> Frameworks de JavaScript y Node.js
+            </li>
+            <li class="tab-link" onclick="showSection('formulario')">
+                <i class="fas fa-address-book"></i> Formulario de Contacto
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de las secciones -->
+    <main>
+        <!-- Sección: Herramientas de desarrollo -->
+        <section id="herramientas" class="content-section active">
+            <h2>1. Herramientas de Desarrollo de un Navegador Web</h2>
+            <p>Las herramientas de desarrollo permiten a los desarrolladores web inspeccionar, modificar y depurar el código de una página web en tiempo real. Estas herramientas son integradas en los navegadores web modernos como Google Chrome, Mozilla Firefox, Safari y Edge. A través de estas herramientas, los desarrolladores pueden inspeccionar el HTML y CSS de las páginas web, realizar pruebas de rendimiento, realizar cambios en tiempo real y depurar problemas en el código.</p>
+        </section>
+
+        <!-- Sección: JavaScript -->
+        <section id="javascript" class="content-section" style="display: none;">
+            <h2>2. JavaScript</h2>
+            <p><strong>JavaScript</strong> es un lenguaje de programación esencial para el desarrollo web. Permite la creación de páginas interactivas y dinámicas. Es uno de los tres pilares fundamentales de la web moderna, junto con HTML y CSS. JavaScript permite manipular el DOM (Document Object Model), realizar validaciones en formularios, manejar eventos como clics o desplazamientos, y comunicarse con servidores a través de AJAX. Es un lenguaje versátil que se utiliza tanto en el cliente como en el servidor (Node.js). Con JavaScript, se pueden actualizar dinámicamente partes de la página web sin necesidad de recargarla completamente, lo que mejora la experiencia del usuario.</p>
+        </section>
+
+        <!-- Sección: Frameworks de HTML y CSS -->
+        <section id="frameworks" class="content-section" style="display: none;">
+            <h2>3. Frameworks Usados en Entornos HTML y CSS/UI</h2>
+            <p>Los **frameworks de CSS/UI** como **Bootstrap** y **Tailwind CSS** proporcionan una base para construir sitios web rápidamente. Bootstrap es un framework muy popular que incluye un sistema de rejillas, componentes listos para usar y una serie de utilidades que permiten crear sitios web responsivos rápidamente. Tailwind CSS, por su parte, es un framework más centrado en las utilidades, lo que permite a los desarrolladores construir estilos personalizados de forma eficiente sin tener que escribir CSS desde cero.</p>
+        </section>
+
+        <!-- Sección: Frameworks de JavaScript y Node.js -->
+        <section id="frameworks_js" class="content-section" style="display: none;">
+            <h2>4. Frameworks Usados en Entornos Node.js</h2>
+            <ul>
+                <li><strong>React.js</strong>: Biblioteca para interfaces interactivas...</li>
+                <li><strong>Vue.js</strong>: Framework progresivo para interfaces...</li>
+            </ul>
+        </section>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image1.jpg" style="width:100%" alt="Imagen 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="image2.jpg" style="width:100%" alt="Imagen 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="image3.jpg" style="width:100%" alt="Imagen 3">
+            </div>
+        </div>
+
+        <!-- Imagen de la galería -->
+        <img src="images/caracol.jpeg" alt="Imagen 1" class="modal-image" onclick="openModal('modal1')">
+
+        <!-- Modal -->
+        <div id="modal1" class="modal">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img class="modal-content" id="img1">
+            <div id="caption"></div>
+        </div>
+
+        
+
+        <!-- Sección: Control de Video -->
+        <section id="videoControl" class="content-section" style="display: none;">
+            <h2>6.1. Control de Video</h2>
+            
+            <!-- Video MP4 -->
+            <h3>Video MP4</h3>
+            <video id="videoMP4" width="600" controls>
+                <source src="video/sample.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video MP4.
+            </video>
+
+            <!-- Botón de Play/Pause para el video MP4 -->
+            <button id="playPauseMP4">Reproducir</button>
+
+            <!-- Control de volumen para el video MP4 -->
+            <input type="range" id="volumeControlMP4" min="0" max="1" step="0.1" value="1">
+
+            <!-- Video WebM -->
+            <h3>Video WebM</h3>
+            <video id="videoWebM" width="600" controls>
+                <source src="video/sample.webm" type="video/webm">
+                Tu navegador no soporta el formato de video WebM.
+            </video>
+
+            <!-- Botón de Play/Pause para el video MP4 -->
+            <button id="playPauseWEBM">Reproducir</button>
+
+            <!-- Control de volumen para el video MP4 -->
+            <input type="range" id="volumeControlWEBM" min="0" max="1" step="0.1" value="1">
+        </section>
+
+        <!-- Sección del Formulario de Contacto -->
+        <section id="formulario" class="content-section" style="display: none;">
+            <h2>Formulario de Contacto</h2>
+            <form id="formContact">
+                <!-- Campo de texto -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" title="El nombre solo puede contener letras y espacios.">
+                <br><br>
+
+                <!-- Campo de correo electrónico -->
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <!-- Campo de radio (selección única) -->
+                <label for="contacto">¿Cómo prefieres ser contactado?</label>
+                <input type="radio" id="telefono" name="contacto" value="telefono" required>
+                <label for="telefono">Teléfono</label>
+                <input type="radio" id="emailContacto" name="contacto" value="email" required>
+                <label for="emailContacto">Email</label>
+                <br><br>
+
+                <!-- Campo de checkbox (selección múltiple) -->
+                <label for="suscripcion">¿Te gustaría suscribirte a nuestro boletín?</label>
+                <input type="checkbox" id="suscripcion" name="suscripcion">
+                <br><br>
+
+                <!-- Campo oculto -->
+                <input type="hidden" name="usuarioId" value="12345">
+
+                <!-- Campo de área de texto -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+                <br><br>
+
+                <!-- Campo de selección (dropdown) -->
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="" disabled selected>Selecciona un país</option>
+                    <option value="esp">España</option>
+                    <option value="peru">Perú</option>
+                    <option value="mexico">México</option>
+                </select>
+                <br><br>
+
+                <!-- Botón de enviar -->
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Mensaje de validación -->
+            <p id="mensajeValidacion" style="color: red; display: none;">Por favor, rellena todos los campos correctamente.</p>
+        </section>
+
+        <!-- Elemento animado -->
+        <div id="animateMe" class="animated-element">
+            Este es el elemento que se moverá.
+        </div>
+        <button onclick="animateElement()">Iniciar Animación</button>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Proyecto Web</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

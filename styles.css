@@ -1,0 +1,302 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif; /* Usando Google Fonts */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Cargando la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Estilo para el header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+/* Estilo de las pestañas */
+nav ul.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+nav ul.tabs li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+nav ul.tabs li i {
+    margin-right: 8px;
+}
+
+nav ul.tabs li.active {
+    background-color: #4CAF50;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+nav ul.tabs li:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Estilo de las secciones */
+.content-section {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Estilo del elemento que se moverá */
+#animateMe {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Botón para iniciar la animación */
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo de validación del formulario */
+#mensajeValidacion {
+    margin-top: 10px;
+    font-size: 1em;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 4px solid #4CAF50;
+}
+
+/* Uso de selector universal para quitar márgenes globales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Uso de Linear-gradient en el fondo de una sección */
+#header {
+    background: linear-gradient(to right, #4CAF50, #66bb6a);
+}
+
+/* Estilo de la lista no ordenada */
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Aplicación de box-shadow en un contenedor */
+#formulario {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Transformaciones: escala, rotación, y traslación */
+div.transform-example {
+    transform: scale(1.1) rotate(10deg) translate(20px, 30px);
+    transition: transform 0.3s ease;
+}
+
+div.transform-example:hover {
+    transform: scale(1.2) rotate(0deg) translate(0, 0);
+}
+
+/* Responsive y Mobile First: media queries */
+@media screen and (max-width: 600px) {
+    nav {
+        display: none; 
+    }
+
+    article {
+        width: 100%; 
+        height: 100px;
+    }
+}
+
+/* Estilo para elementos inline-block */
+.inline-block-element {
+    display: inline-block;
+    margin: 10px;
+    width: 45%;
+}
+
+/* Estilo para elementos con display block */
+.block-element {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Estilo flotante (float) y clearing */
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Estilo de los videos */
+video {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón para iniciar la animación */
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo del Sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilo para el slideshow */
+.mySlides {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animación en Botón */
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
